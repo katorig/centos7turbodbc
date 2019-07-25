@@ -1,4 +1,4 @@
-### Docker image: CentOS + turbodbc
+## Docker image: CentOS + turbodbc
 
 Docker image based on CentOS 7 with Python 3.6 library **turbodbc** installed.
 
