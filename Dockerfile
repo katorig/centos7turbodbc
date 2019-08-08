@@ -12,8 +12,10 @@ ENV FTP_PROXY=$proxy
 ENV HTTPS_PROXY=$proxy
 
 # Python 3.6
-RUN yum install -y https://centos7.iuscommunity.org/ius-release.rpm && yum update -y && yum install -y python36u python36u-libs python36u-devel python36u-pip
+RUN yum install -y https://centos7.iuscommunity.org/ius-release.rpm \
+    && yum update -y \
+    && yum install -y python36u python36u-libs python36u-devel python36u-pip
 
 # TurboDBC
-RUN yum install gcc-c++ boost-devel unixODBC-devel python-devel -y
-RUN python3.6 -m pip install --upgrade pip optional numpy pyarrow==0.13.0 turbodbc
+RUN yum install gcc-c++ boost-devel unixODBC-devel python-devel -y \
+    && python3.6 -m pip install --upgrade pip optional numpy pyarrow==0.13.0 turbodbc
